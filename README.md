@@ -50,7 +50,7 @@ This repository documents my journey through Cisco’s Linux Unhatched labs, inc
 - Practiced navigating between directories using `cd` and shortcuts.
 
 **Screenshot:**  
-
+![Lab 2 Screenshot](images/lab2.png)
 
 ---
 

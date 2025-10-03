@@ -1,7 +1,16 @@
-# linux_unhatched
+# Linux Unhatched
 “My progress through Cisco’s Linux Unhatched labs"
 
 This repository documents my journey through Cisco’s Linux Unhatched labs, including commands, insights, and screenshots.
+
+## Progress Tracker
+| Lab | Status | Screenshot |
+|-----|--------|------------|
+| Lab 1 | ✅ Completed | ![Lab 1](images/lab1.png) |
+| Lab 2 | ✅ Completed | ![Lab 2](images/lab2.png) |
+| Lab 3 | ✅ Completed | ![Lab 3](images/lab3_1.png) |
+| Lab 4 | ⏳ In Progress | 6.Administrative Access
+
 
 ## Labs Completed
 

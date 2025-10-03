@@ -53,6 +53,53 @@ This repository documents my journey through Cisco’s Linux Unhatched labs, inc
 ![Lab 2 Screenshot](images/lab2.png)
 
 ---
+### Lab 3
+- **Commands:** `ls`, `ls -l`, `ls -lt`, `ls -lS`, `ls -lr`, `ls -lSr`
+
+**What They Do:**
+- `ls`: Lists files in the current directory (alphabetical by default).
+- `ls -l`: Long listing with details (file type, permissions, hard link count, owner, group, size, timestamp, filename).
+- `ls -lt`: Sorts by timestamp (newest first).
+- `ls -lS`: Sorts by file size (largest first).
+- `ls -lr`: Reverses the order (alphabetical Z→A).
+- `ls -lSr`: Sorts by size, smallest first.
+
+**Concepts Learned:**
+- **File types:**  
+  - `-` regular file, `d` directory, `b` block device, `c` character device,  
+  - `s` socket, `p` pipe, `l` symbolic link.
+  ![Lab 3 Screenshot](images/file_type.png)
+- **Permissions:** Control read (`r`), write (`w`), and execute (`x`) access for owner, group, and others.
+- **Ownership:** Split into **user** (creator/owner) and **group**.
+- **Hard link count:** Number of directory entries pointing to a file (directories always have at least 2).
+- **File size:** Shown in bytes; directories often show multiples of the filesystem block size (commonly 4096 bytes).
+- **Timestamps:** Show last modification time.
+- **Symbolic links:** Display with `->` pointing to the target file.
+
+**Insights:**
+- `/var/log` is a great practice directory because it contains many file types, different owners/groups, and varied sizes/timestamps.
+- Sorting options (`-t`, `-S`, `-r`) make it easier to analyze files by time, size, or order.
+- Learned that a directory’s size reflects the space used to store its entries, not the total size of files inside.
+
+**Why /var/log is used:**
+- Contains a wide variety of files (regular files, directories, links).
+- `ls -l /var/log` will list every file and directory entry, even if they have different owners, groups, or permissions.
+- You can always *see* the files and their details (permissions, ownership, size, timestamps), but you may not be able to open or read all of them without the right privileges (e.g., some require root).
+- Safe to explore with `ls` because you’re only listing, not modifying.
+- Logs reflect real system activity, so sorting and listing options show meaningful differences.
+- Other directories (like `/home`) may not have enough variety to demonstrate permissions, ownership, and sorting.
+
+📦 **Block Size Visualization**  
+Even a tiny file (like 1 byte) still consumes a full filesystem block (commonly 4096 bytes). 
+This is why directories often show sizes like 4096 or 8192 — it reflects the space used for their entries, not the total size of files inside.
+
+**Screenshot:**
+![Lab 3 Screenshot](images/lab3_1.png)
+![Lab 3 Screenshot](images/lab3_2.png)
+![Lab 3 Screenshot](images/lab3_3.png)
+
+
+---
 
 ## Bonus: Easter Egg Discovery
 - **Command Used:** `aptitude moo`

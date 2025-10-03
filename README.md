@@ -24,9 +24,33 @@ This repository documents my journey through Cisco’s Linux Unhatched labs, inc
 ---
 
 ### Lab 2
-- **Commands:**  
-- **Summary:**  
-- **Screenshot:** [Add image or link here]
+- **Commands:** `clear`, `pwd`, `cd`, `cd ..`, `cd .`, `cd ~`
+
+**What They Do:**
+- `clear`: Clears the terminal screen (tidies up the workspace).
+- `pwd`: Prints the working directory (shows your current location in the filesystem).
+- `cd [path]`: Changes directory to the specified path.
+- `cd /`: Moves to the root directory (the top of the filesystem tree).
+- `cd ..`: Moves up one level to the parent directory.
+- `cd .`: Refers to the current directory (not very useful with `cd`, but important later).
+- `cd ~`: Returns to the home directory of the current user (`/home/sysadmin`).
+
+**Concepts Learned:**
+- Directories in Linux are like folders in Windows/Mac.
+- A **path** is a list of directories separated by `/`.
+- **Absolute paths** always start with `/` (e.g., `/home/sysadmin`).
+- **Relative paths** use shortcuts:
+  - `..` → parent directory
+  - `.` → current directory
+  - `~` → home directory of the logged-in user
+
+**Insights:**
+- Learned that Linux always starts you in your home directory (`/home/sysadmin`) when you log in as `sysadmin`.
+- Understood the difference between absolute and relative paths.
+- Practiced navigating between directories using `cd` and shortcuts.
+
+**Screenshot:**  
+
 
 ---
 

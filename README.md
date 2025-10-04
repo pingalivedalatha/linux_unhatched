@@ -107,6 +107,39 @@ This is why directories often show sizes like 4096 or 8192 — it reflects the s
 ![Lab 3 Screenshot](images/lab3_2.png)
 ![Lab 3 Screenshot](images/lab3_3.png)
 
+---
+
+### Lab 4
+- **Commands:** `su`, `su -`, `su -l`, `su --login`, `exit`, `sudo`, `sudo -u`
+
+**What They Do:**
+- `su`: Switches to another user account (default is root) by opening a new shell.
+- `su -`, `su -l`, `su --login`: Starts a login shell with the new user’s environment fully configured.
+- `exit`: Logs out of the current shell and returns to the previous user.
+- `sudo`: Executes a single command with administrative privileges (without switching users).
+- `sudo -u [user] [command]`: Executes a command as a specified user.
+
+**Concepts Learned:**
+- **Administrative access** is required for sensitive commands (e.g., system-level operations).
+- **`su` vs `sudo`:**
+  - `su` opens a new shell as another user (usually root).
+  - `sudo` runs a single command as another user (default is root), without switching shells.
+- **Login shell options** (`su -`, `su --login`) ensure the new shell uses the target user’s environment.
+- **Password security:** Passwords (like `netlab123`) are required but not shown when typed.
+- **Prompt change:** When using `su`, the shell prompt changes to reflect the new user (e.g., `root@localhost`).
+- **Steam Locomotive (`sl`) command** was used to demonstrate permission control:
+  - Fails when run as `sysadmin`.
+  - Succeeds when run as `root` via `su` or `sudo`.
+
+**Insights:**
+- Switching users with `su` gives full root access, which can be risky if not handled carefully.
+- Using `sudo` is safer for one-off commands—it limits the scope of elevated access.
+- Learned how to verify which user is active based on the shell prompt.
+- Practiced using `exit` to safely return to the original user.
+
+**Screenshot:**  
+![Lab 4 Screenshot 1](images/lab4_1.png)  
+![Lab 4 Screenshot 2](images/lab4_2.png)
 
 ---
 

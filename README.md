@@ -4,13 +4,13 @@
 This repository documents my journey through Cisco’s Linux Unhatched labs, including commands, insights, and screenshots.
 
 ## Progress Tracker
-| Lab | Status | Screenshot |
-|-----|--------|------------|
-| Lab 1 | ✅ Completed | ![Lab 1](images/lab1.png) |
-| Lab 2 | ✅ Completed | ![Lab 2](images/lab2.png) |
-| Lab 3 | ✅ Completed | ![Lab 3](images/lab3_1.png) |
-| Lab 4 | ⏳ In Progress | 6.Administrative Access
-
+| Lab    | Status        | Screenshot                     |
+|--------|---------------|--------------------------------|
+| Lab 1  | ✅ Completed   | ![Lab 1](images/lab1.png)       |
+| Lab 2  | ✅ Completed   | ![Lab 2](images/lab2.png)       |
+| Lab 3  | ✅ Completed   | ![Lab 3](images/lab3_1.png)     |
+| Lab 4  | ✅ Completed   | ![Lab 4](images/lab4_1.png)     |
+| Lab 5  | ✅ Completed   | ![Lab 5](images/lab5.png)       |
 
 ## Labs Completed
 
@@ -140,6 +140,29 @@ This is why directories often show sizes like 4096 or 8192 — it reflects the s
 **Screenshot:**  
 ![Lab 4 Screenshot 1](images/lab4_1.png)  
 ![Lab 4 Screenshot 2](images/lab4_2.png)
+
+---
+
+### Lab 5
+- **Commands:** `cd`, `ls -l`
+
+**What They Do:**
+- `cd ~/Documents`: Navigates to the Documents folder in the home directory.
+- `ls -l hello.sh`: Displays file details including type, permissions, owner, group, size, and timestamp.
+
+**Concepts Learned:**
+- File types: `-` for regular files, `d` for directories.
+- Permissions are grouped into **Owner**, **Group**, and **Others**—each with `r` (read), `w` (write), `x` (execute).
+- Only one permission set applies based on your relationship to the file.
+- Ownership fields show who owns the file and which group it belongs to.
+
+**Insights:**
+- Permissions affect how users interact with files and directories.
+- Example: `-r--rw-rwx` means the owner has read-only access, while others have more.
+- Owner permissions take precedence—even if the owner is in the group.
+
+**Screenshot:**  
+![Lab 5 Screenshot](images/lab5.png)
 
 ---
 

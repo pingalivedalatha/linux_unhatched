@@ -166,6 +166,34 @@ This is why directories often show sizes like 4096 or 8192 — it reflects the s
 
 ---
 
+### Lab 6
+- **Commands:** `chmod`, `ls -l`, `./hello.sh`
+
+**What They Do:**
+- `chmod u+x hello.sh`: Adds execute permission for the user owner of the file.
+- `ls -l hello.sh`: Verifies permission changes.
+- `./hello.sh`: Executes the script from the current directory.
+
+**Concepts Learned:**
+- **chmod** stands for “change mode” (not “change permission”) because permissions were historically called modes of access.
+- **Symbolic method** of `chmod` uses:
+  - `u`, `g`, `o`, `a` to target user, group, others, or all.
+  - `+`, `-`, `=` to add, remove, or set exact permissions.
+  - `r`, `w`, `x` for read, write, and execute.
+- Only the **file owner or root** can change permissions.
+- Without execute permission, a script like `hello.sh` cannot be run—even if readable.
+- Adding `x` for the user owner enables script execution.
+
+**Insights:**
+- Using `chmod u+x` is a safe way to grant execution rights without affecting group or others.
+- `./hello.sh` runs the script from the current directory—this avoids relying on the system’s PATH.
+- After permission is granted, the script runs successfully and prints “Hello World!”
+
+**Screenshot:**  
+![Lab 6 Screenshot](images/lab6.png)
+
+---
+
 ## Bonus: Easter Egg Discovery
 - **Command Used:** `aptitude moo`
 - **What It Does:** Displays a humorous message—“There are no Easter Eggs in this program.”

@@ -1,4 +1,4 @@
-# Linux Unhatched
+# Cisco's Linux Unhatched
 “My progress through Cisco’s Linux Unhatched labs"
 
 This repository documents my journey through Cisco’s Linux Unhatched labs, including commands, insights, and screenshots.
@@ -251,7 +251,6 @@ This is why directories often show sizes like 4096 or 8192 — it reflects the s
 - `cp /etc/passwd passwd_backup`: Creates a copy named `passwd_backup` in the current directory.
 - `ls`: Lists files to confirm the copy exists.
 
----
 
 #### 🔍 Verifying the Copy with `diff`
 
@@ -262,8 +261,6 @@ This is why directories often show sizes like 4096 or 8192 — it reflects the s
 - `diff /etc/passwd passwd_backup`: Confirms whether the backup is identical to the original.
   - If there's **no output**, the files are **identical**.
   - If there is output, it shows the differences line by line.
-
----
 
 #### 🔐 Permission Requirements
 
@@ -276,8 +273,6 @@ This is why directories often show sizes like 4096 or 8192 — it reflects the s
 - Your home directory (`~/`)
 - `/tmp` — a shared space for temporary files
 
----
-
 #### 💡 Use Cases for Copying Files
 
 - Create backups before editing.
@@ -285,10 +280,89 @@ This is why directories often show sizes like 4096 or 8192 — it reflects the s
 - Use existing files as templates for new ones.
 - Compare versions using `diff`.
 
----
-
 **Screenshot:**  
 ![Lab 8 Screenshot](images/lab8.png)
+
+---
+
+### Lab 9
+
+#### ⚠️ Understanding Destructive Commands
+
+**Commands:** `rm`, `sudo`, `-r`, `-f`
+
+**What They Do:**
+- `rm`: Removes files or directories.
+- `-r`: Recursively deletes contents of directories.
+- `-f`: Forces deletion without confirmation.
+- `sudo`: Executes the command with root privileges.
+
+**Example:**
+```bash
+sudo rm -rf /
+
+**Impact & Recovery**
+**Impact:**
+-System files, user data, and boot components are wiped.
+-Even basic tools needed for recovery are deleted.
+
+**Why Recovery Is Hard:**
+-OS becomes unbootable.
+-No shell or package manager remains.
+-Recovery requires a full backup or clean reinstall.
+
+**How to Protect Yourself**
+-Back up files regularly.
+-Use safer deletion:
+```bash
+rm -i filename
+-Avoid `sudo` with destructive commands.
+-Lock critical files:
+```bash
+chattr +i filename
+
+---
+
+#### 📂 Moving Files with `mv`
+
+**Commands:** `mv`, `ls`, `cd`
+
+**What They Do:**
+- `mv [SOURCE] [DESTINATION]`: Moves a file from one location to another.
+- `mv people.csv Work`: Moves `people.csv` into the `Work` directory.
+- `mv numbers.txt letters.txt alpha.txt School`: Moves multiple files into the `School` directory.
+- `mv animals.txt zoo.txt`: Renames `animals.txt` to `zoo.txt` within the same directory.
+- `ls`: Lists files to confirm the move or rename.
+- `cd ~/Documents`: Navigates to the working directory.
+
+#### 🔍 Verifying the Move
+
+**Commands:** `ls`
+
+**What They Do:**
+- `ls Work`: Confirms that `people.csv` was successfully moved.
+- `ls School`: Verifies that multiple files were moved.
+- `ls`: Shows that `animals.txt` was renamed to `zoo.txt`.
+
+#### 🔐 Permission Requirements
+
+**To successfully move a file:**
+- ✅ **Write + execute permission** on the source directory.
+- ✅ **Write + execute permission** on the destination directory.
+
+**Why It Matters:**
+- Without execute permission, you can’t access the directory.
+- Without write permission, you can’t modify its contents (e.g., move or rename files).
+
+#### 💡 Use Cases for Moving Files
+
+- Organize files into folders (e.g., move documents into `Work` or `School`).
+- Rename files for clarity or versioning.
+- Clean up clutter by relocating files.
+- Batch move multiple files with a single command.
+
+**Screenshot:**  
+![Lab 9 Screenshot](images/lab9.png) 
 
 ---
 

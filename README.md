@@ -194,6 +194,51 @@ This is why directories often show sizes like 4096 or 8192 — it reflects the s
 
 ---
 
+### Lab 7
+
+#### 🔐 Changing File Ownership
+
+**Commands:** `chown`, `sudo`, `ls -l`, `./hello.sh`
+
+**What They Do:**
+- `chown [OWNER] FILE`: Changes the user owner of a file (requires `sudo`).
+- `sudo chown root hello.sh`: Transfers ownership of `hello.sh` to root.
+- `ls -l hello.sh`: Verifies ownership change.
+- `sudo ./hello.sh`: Executes the script as root since only root has execute permission.
+
+**Insights:**
+- Only root can change file ownership.
+- After ownership changes, permissions must be reassessed—execution may fail if the new owner is the only one with `x` permission.
+- Using `sudo` allows execution under root privileges.
+
+---
+
+#### 📄 Viewing File Contents
+
+**Commands:** `cat`, `head`, `tail`
+
+**What They Do:**
+- `cat [FILE]`: Displays the entire file—best for small files.
+- `head [FILE]`: Shows the first 10 lines.
+- `tail [FILE]`: Shows the last 10 lines.
+- `head -n [number] [FILE]`: Views a specific number of lines from the top.
+- `tail -n [number] [FILE]`: Views a specific number of lines from the bottom.
+
+**Insights:**
+- Use `cat` for quick checks.
+- Use `head` and `tail` for large or frequently updated files.
+- `-n` option customizes output length for better control.
+
+---
+
+**Screenshot:**  
+![Lab 7 Screenshot](images/lab7_1.png)
+![Lab 7 Screenshot](images/lab7_2.png)
+![Lab 7 Screenshot](images/lab7_3.png)
+![Lab 7 Screenshot](images/lab7_4.png)
+
+---
+
 ## Bonus: Easter Egg Discovery
 - **Command Used:** `aptitude moo`
 - **What It Does:** Displays a humorous message—“There are no Easter Eggs in this program.”

@@ -287,45 +287,6 @@ This is why directories often show sizes like 4096 or 8192 — it reflects the s
 
 ### Lab 9
 
-#### ⚠️ Understanding Destructive Commands
-
-**Commands:** `rm`, `sudo`, `-r`, `-f`
-
-**What They Do:**
-- `rm`: Removes files or directories.
-- `-r`: Recursively deletes contents of directories.
-- `-f`: Forces deletion without confirmation.
-- `sudo`: Executes the command with root privileges.
-
-**Example:**
-```bash
-sudo rm -rf /
-```
-
-**Impact & Recovery**
-**Impact:**
-- System files, user data, and boot components are wiped.
-- Even basic tools needed for recovery are deleted.
-
-**Why Recovery Is Hard:**
-- OS becomes unbootable.
-- No shell or package manager remains.
-- Recovery requires a full backup or clean reinstall.
-
-**How to Protect Yourself**
-- Back up files regularly.
-- Use safer deletion:
-```bash
-rm -i filename
-```
-- Avoid `sudo` with destructive commands.
-- Lock critical files:
-```bash
-chattr +i filename
-```
-
----
-
 #### 📂 Moving Files with `mv`
 
 **Commands:** `mv`, `ls`, `cd`
@@ -366,6 +327,63 @@ chattr +i filename
 
 **Screenshot:**  
 ![Lab 9 Screenshot](images/lab9.png) 
+
+---
+
+### Lab 10
+
+#### 🗑️ Removing Files with `rm`
+
+**Commands:** `rm`, `ls`, `cd`, `-r`, `-R`
+
+**What They Do:**
+- `rm [OPTIONS] FILE`: Removes files or directories.
+- `rm filename`: Deletes a regular file.
+- `rm -r directory`: Recursively removes a directory and all its contents.
+- `cd ~/Documents`: Changes into the `Documents` directory.
+- `ls`: Lists files to verify removal.
+
+**Important:**  
+Unlike desktop systems, Linux does **not** have a “trash can.”  
+When you delete a file with `rm`, it is **permanently removed**.
+
+**🔐 Permission Requirements**
+- To successfully delete a file:
+- ✅ Write + execute permission on the directory containing the file.
+
+#### ⚠️ Understanding Destructive Commands
+
+**Commands:** `rm`, `sudo`, `-r`, `-f`
+
+**Example:**
+```bash
+sudo rm -rf /
+```
+
+**Impact & Recovery**
+**Impact:**
+- System files, user data, and boot components are wiped.
+- Even basic tools needed for recovery are deleted.
+
+**Why Recovery Is Hard:**
+- OS becomes unbootable.
+- No shell or package manager remains.
+- Recovery requires a full backup or clean reinstall.
+
+**How to Protect Yourself**
+- Back up files regularly.
+- Use safer deletion:
+```bash
+rm -i filename
+```
+- Avoid `sudo` with destructive commands.
+- Lock critical files:
+```bash
+chattr +i filename
+```
+
+**Screenshot:**  
+![Lab 10 Screenshot](images/lab10.png)
 
 ---
 

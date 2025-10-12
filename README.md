@@ -239,6 +239,59 @@ This is why directories often show sizes like 4096 or 8192 — it reflects the s
 
 ---
 
+### Lab 8
+
+#### 📁 Copying Files with `cp`
+
+**Commands:** `cp`, `diff`, `ls`
+
+**What They Do:**
+- `cp [SOURCE] [DESTINATION]`: Copies a file from one location to another.
+- `cp /etc/passwd .`: Copies `/etc/passwd` into the current directory (`.` = current directory).
+- `cp /etc/passwd passwd_backup`: Creates a copy named `passwd_backup` in the current directory.
+- `ls`: Lists files to confirm the copy exists.
+
+---
+
+#### 🔍 Verifying the Copy with `diff`
+
+**Commands:** `diff`
+
+**What They Do:**
+- `diff FILE1 FILE2`: Compares two files line by line.
+- `diff /etc/passwd passwd_backup`: Confirms whether the backup is identical to the original.
+  - If there's **no output**, the files are **identical**.
+  - If there is output, it shows the differences line by line.
+
+---
+
+#### 🔐 Permission Requirements
+
+**To successfully copy a file:**
+- ✅ **Read permission** on the source file.
+- ✅ **Execute permission** on the source directory.
+- ✅ **Write + execute permission** on the destination directory.
+
+**Common writable directories:**
+- Your home directory (`~/`)
+- `/tmp` — a shared space for temporary files
+
+---
+
+#### 💡 Use Cases for Copying Files
+
+- Create backups before editing.
+- Transfer files to external devices.
+- Use existing files as templates for new ones.
+- Compare versions using `diff`.
+
+---
+
+**Screenshot:**  
+![Lab 8 Screenshot](images/lab8.png)
+
+---
+
 ## Bonus: Easter Egg Discovery
 - **Command Used:** `aptitude moo`
 - **What It Does:** Displays a humorous message—“There are no Easter Eggs in this program.”

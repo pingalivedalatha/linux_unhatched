@@ -353,8 +353,6 @@ When you delete a file with `rm`, it is **permanently removed**.
 
 #### ⚠️ Understanding Destructive Commands
 
-**Commands:** `rm`, `sudo`, `-r`, `-f`
-
 **Example:**
 ```bash
 sudo rm -rf /
@@ -384,6 +382,24 @@ chattr +i filename
 
 **Screenshot:**  
 ![Lab 10 Screenshot](images/lab10.png)
+
+---
+
+## 🐧 Fun Fact: Penguins in Space!
+
+- **NASA Uses Linux** 🚀  
+  The **International Space Station** runs on Linux for stability and reliability.  
+
+- **Curiosity Rover on Mars** 🔭  
+  The Mars rover also relies on Linux to carry out its mission on the Red Planet.  
+
+- **Why Linux?**  
+  NASA migrated key functions from Windows to Linux because they needed an operating system that was:
+  - Stable  
+  - Reliable  
+  - Open-source and customizable  
+
+Linux isn’t just powering servers and desktops — it’s literally running in **outer space**!
 
 ---
 

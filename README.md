@@ -299,7 +299,8 @@ This is why directories often show sizes like 4096 or 8192 — it reflects the s
 
 **Example:**
 ```bash
-sudo rm -rf /```
+sudo rm -rf /
+```
 
 **Impact & Recovery**
 **Impact:**
@@ -316,10 +317,12 @@ sudo rm -rf /```
 -Use safer deletion:
 ```bash
 rm -i filename
+```
 -Avoid `sudo` with destructive commands.
 -Lock critical files:
 ```bash
 chattr +i filename
+```
 
 ---
 

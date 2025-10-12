@@ -304,22 +304,22 @@ sudo rm -rf /
 
 **Impact & Recovery**
 **Impact:**
--System files, user data, and boot components are wiped.
--Even basic tools needed for recovery are deleted.
+- System files, user data, and boot components are wiped.
+- Even basic tools needed for recovery are deleted.
 
 **Why Recovery Is Hard:**
--OS becomes unbootable.
--No shell or package manager remains.
--Recovery requires a full backup or clean reinstall.
+- OS becomes unbootable.
+- No shell or package manager remains.
+- Recovery requires a full backup or clean reinstall.
 
 **How to Protect Yourself**
--Back up files regularly.
--Use safer deletion:
+- Back up files regularly.
+- Use safer deletion:
 ```bash
 rm -i filename
 ```
--Avoid `sudo` with destructive commands.
--Lock critical files:
+- Avoid `sudo` with destructive commands.
+- Lock critical files:
 ```bash
 chattr +i filename
 ```

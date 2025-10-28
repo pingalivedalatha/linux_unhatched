@@ -11,6 +11,11 @@ This repository documents my journey through Cisco’s Linux Unhatched labs, inc
 | Lab 3  | ✅ Completed   | ![Lab 3](images/lab3_1.png)     |
 | Lab 4  | ✅ Completed   | ![Lab 4](images/lab4_1.png)     |
 | Lab 5  | ✅ Completed   | ![Lab 5](images/lab5.png)       |
+| Lab 6  | ✅ Completed   | ![Lab 6](images/lab6.png)       |
+| Lab 7  | ✅ Completed   | ![Lab 7](images/lab7_1.png)     |
+| Lab 8  | ✅ Completed   | ![Lab 8](images/lab8.png)       |
+| Lab 9  | ✅ Completed   | ![Lab 9](images/lab9.png)       |
+| Lab 10 | ✅ Completed   | ![Lab 10](images/lab10.png)     |
 
 ## Labs Completed
 

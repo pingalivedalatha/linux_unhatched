@@ -390,6 +390,158 @@ chattr +i filename
 
 ---
 
+---
+
+### Lab 11
+
+#### 🔍 Filtering Input with `grep`
+
+**Commands:** `grep`, `cd`, `cp`, `cat`
+
+**What They Do:**
+- `grep [OPTIONS] PATTERN [FILE]`: Searches text and displays lines matching a pattern.  
+- `cd ~/Documents`: Changes into the `Documents` directory.  
+- `cp /etc/passwd .`: Copies the `/etc/passwd` file to the current directory.  
+- `cat filename`: Displays the contents of a file.  
+
+**Example:**
+```bash
+cd ~/Documents
+cp /etc/passwd .
+grep sysadmin passwd
+````
+
+**Output:**
+
+```
+sysadmin:x:1001:1001:System Administrator,,,,:/home/sysadmin:/bin/bash
+```
+
+This line is the `/etc/passwd` entry for the `sysadmin` user.
+
+---
+
+#### ⚙️ Regular Expressions (Regex)
+
+Regular expressions enhance search capability in `grep`.
+
+**Basic Regex Characters:**
+
+| Character | Meaning                                      |
+| --------- | -------------------------------------------- |
+| `.`       | Any single character                         |
+| `[ ]`     | Any one specified character                  |
+| `[^ ]`    | Any one *not* specified character            |
+| `*`       | Zero or more of the previous character       |
+| `^`       | Match pattern at the **beginning** of a line |
+| `$`       | Match pattern at the **end** of a line       |
+
+**Extended Regex Characters (use `grep -E` or `egrep`):**
+
+| Character | Meaning                                    |            |
+| --------- | ------------------------------------------ | ---------- |
+| `+`       | One or more of the previous pattern        |            |
+| `?`       | The preceding pattern is optional          |            |
+| `{ }`     | Specify minimum, maximum, or exact matches |            |
+| `         | `                                          | Logical OR |
+| `( )`     | Group expressions                          |            |
+
+---
+
+#### 🧱 Basic Pattern Examples
+
+**Search for a literal pattern:**
+
+```bash
+grep sysadmin passwd
+```
+
+**Anchor Characters:**
+
+```bash
+grep '^root' /etc/passwd     # Match lines starting with "root"
+grep 'r$' alpha-first.txt    # Match lines ending with "r"
+```
+
+**Match a single character (`.`):**
+
+```bash
+grep 'r..f' red.txt
+```
+
+Matches: `reef`, `roof`
+
+**Match character ranges (`[]`):**
+
+```bash
+grep '[0-9]' profile.txt
+```
+
+Matches lines containing numbers.
+
+**Negate characters (`[^ ]`):**
+
+```bash
+grep '[^0-9]' profile.txt
+```
+
+Matches lines with non-numeric characters.
+
+**Match repeated characters (`*`):**
+
+```bash
+grep 're*d' red.txt
+```
+
+Matches: `red`, `reed`, `reeed`
+
+**Multiple options with ranges:**
+
+```bash
+grep 'r[oe]*d' red.txt
+```
+
+Matches: `red`, `rod`, `reed`
+
+---
+
+#### 💡 Standard Input Mode
+
+If no file is provided, `grep` reads from **standard input**:
+
+```bash
+grep pattern
+```
+
+Type text and press **Ctrl + D** to end input.
+
+---
+
+#### 🏠 Return to Home Directory
+
+```bash
+cd ~
+```
+
+---
+
+**Summary:**
+
+* `grep` filters and searches for text patterns efficiently.
+* Regular expressions allow complex searches.
+* Use quotes (`' '`) to protect patterns from shell interpretation.
+
+**Screenshot:**
+![Lab 11 Screenshot 1](images/lab11_1.png)
+![Lab 11 Screenshot 2](images/lab11_2.png)
+![Lab 11 Screenshot 3](images/lab11_3.png)
+![Lab 11 Screenshot 4](images/lab11_4.png)
+![Lab 11 Screenshot 5](images/lab11_5.png)
+![Lab 11 Screenshot 6](images/lab11_6.png)
+![Lab 11 Screenshot 7](images/lab11_7.png)
+
+---
+
 ## 🐧 Fun Fact: Penguins in Space!
 
 - **NASA Uses Linux** 🚀  

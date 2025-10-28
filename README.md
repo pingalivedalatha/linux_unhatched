@@ -16,6 +16,7 @@ This repository documents my journey through Cisco’s Linux Unhatched labs, inc
 | Lab 8  | ✅ Completed   | ![Lab 8](images/lab8.png)       |
 | Lab 9  | ✅ Completed   | ![Lab 9](images/lab9.png)       |
 | Lab 10 | ✅ Completed   | ![Lab 10](images/lab10.png)     |
+| Lab 11 | ✅ Completed   | ![Lab 11](images/lab11_1.png)     |
 
 ## Labs Completed
 
@@ -387,8 +388,6 @@ chattr +i filename
 
 **Screenshot:**  
 ![Lab 10 Screenshot](images/lab10.png)
-
----
 
 ---
 

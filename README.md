@@ -27,13 +27,17 @@ This repository documents my journey through Cisco’s Linux Unhatched labs, inc
 | **Lab 15** | 🟢 Completed | ![Lab 15](images/lab15_1.png) |
 | **Lab 16** | 🟢 Completed | ![Lab 16](images/lab16_1.png) |
 | **Lab 17** | 🟢 Completed | ![Lab 17](images/lab17.png) |
-| **Lab 18** | 🟢 Completed | ![Lab 18](images/lab18.png) |
+| **Lab 18** | 🟢 Completed | |
 
 ---
 
-### 📈 Overall Progress  
-![Progress](https://progress-bar.dev/100/?title=All%20Labs%20Complete&width=300)
+**Badge:**  
+![Badge](images/badge.png)
 
+**Certificate:**  
+![Badge](images/certificate.png)
+
+---
 
 ## Labs Completed
 

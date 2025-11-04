@@ -741,6 +741,131 @@ Manage software installation, updates, and removal on Debian-based systems like 
 
 ---
 
+### Lab 16
+
+#### 🔒 Updating User Passwords with `passwd`
+
+**Commands:** `passwd`, `su`, `exit`
+
+**Purpose:**  
+Manage and update user passwords. Regular users can change their own passwords, while the **root** user can change any account’s password.
+
+---
+
+#### ⚙️ Key Concepts
+
+- **Password Update:**  
+  `passwd` prompts for the current password and a new one (entered twice).  
+  No characters appear while typing for security reasons.
+
+- **View Password Status:**  
+  `passwd -S [username]`  
+  Displays password details such as status, last change date, and expiry info.
+
+---
+
+#### 🧩 Output Fields Explained
+
+| Field | Example | Meaning |
+|-------|----------|----------|
+| **User Name** | sysadmin | Account name |
+| **Password Status** | P | P = active, L = locked, NP = no password |
+| **Change Date** | 12/20/2017 | Date password was last changed |
+| **Minimum** | 0 | Days before user can change password again |
+| **Maximum** | 99999 | Days before password expires |
+| **Warn** | 7 | Days before expiry warning |
+| **Inactive** | -1 | Days account remains active after expiry |
+
+---
+
+#### 🧑‍💻 Administrative Actions
+
+- **Switch to Root:**  
+  `su root` (password: `netlab123`)  
+
+- **Change Another User’s Password:**  
+  `passwd [username]`  
+
+- **Exit Root Mode:**  
+  `exit`
+
+---
+
+**Screenshot:**  
+![Lab 16 Screenshot](images/lab16_1.png)
+
+---
+### Lab 17
+
+#### 🔁 Redirection in Linux
+
+**Commands:** `>`, `>>`, `cat`, `echo`, `ls`
+
+**Purpose:**  
+Redirect command input and output streams to files or other destinations using **I/O redirection**.
+
+---
+
+#### ⚙️ Key Concepts
+
+- **I/O Redirection:**  
+  Changes the default input/output behavior of commands.
+
+- **File Descriptors:**  
+  | Type | Name | Description |
+  |-------|------|-------------|
+  | **STDIN (0)** | Standard Input | What the command reads (keyboard input). |
+  | **STDOUT (1)** | Standard Output | Normal output (shown in terminal). |
+  | **STDERR (2)** | Standard Error | Error messages from failed commands. |
+
+---
+
+#### 🧩 Common Redirection Operators
+
+- **Overwrite Output:**  
+  `[COMMAND] > [FILE]`  
+  Redirects output to a file, **overwriting** existing content.  
+  Example:  
+  `cat food.txt > newfile1.txt`
+
+- **Append Output:**  
+  `[COMMAND] >> [FILE]`  
+  Redirects output to a file, **appending** new content instead of overwriting.  
+  Example:  
+  `echo "This food is good." >> newfile1.txt`
+
+---
+
+#### 🧠 Usage Examples
+
+- View contents of a file:  
+  `cat food.txt`
+
+- Copy file output using redirection:  
+  `cat food.txt > newfile1.txt`
+
+- Add a line to a file:  
+  `echo "I like food." >> newfile1.txt`
+
+- Check updated content:  
+  `cat newfile1.txt`
+
+---
+
+#### ⚠️ Notes
+
+- Using `>` **overwrites** existing file content.  
+- Use `>>` to **append** without deleting existing data.  
+- You must have **write permissions** to redirect output to a file.  
+- Useful for saving command results or logs.
+
+---
+
+**Screenshot:**  
+![Lab 17 Screenshot](images/lab17.png)
+
+---
+
 ## 🐧 Fun Fact: Penguins in Space!
 
 - **NASA Uses Linux** 🚀  

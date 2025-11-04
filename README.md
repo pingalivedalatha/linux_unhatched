@@ -541,6 +541,201 @@ cd ~
 
 ---
 
+### Lab 12
+
+#### 📴 Shutting Down the System with `shutdown`
+
+**Command:** `shutdown [OPTIONS] TIME [MESSAGE]`
+
+**Purpose:**  
+Safely brings the system down while notifying all logged-in users and preventing new logins before shutdown.
+
+---
+
+#### ⚙️ Steps
+
+1. Switch to the root account:  
+   `su -`  
+   *(Password: netlab123)*
+
+2. Run an immediate shutdown:  
+   `shutdown now`
+
+   **Output Example:**  
+   The system is going down for maintenance NOW!
+
+3. Schedule a shutdown:  
+   - `shutdown +5` → in 5 minutes  
+   - `shutdown 01:30` → at 1:30 AM  
+   - `shutdown now` → immediately
+
+4. Add a custom message:  
+   `shutdown +1 "Goodbye World!"`
+
+---
+
+#### 🕒 Check System Time
+
+`date` → displays current system time (often in UTC).  
+Example: `Sat Oct 3 22:15:58 UTC 2020`
+
+---
+
+#### 🧠 Summary
+
+- Requires root privileges  
+- Accepts time formats: `now`, `+minutes`, or `hh:mm`  
+- Optionally includes a broadcast message  
+- Safely stops or reboots the system  
+
+**Screenshot:**  
+![Lab 12 Screenshot](images/lab12.png)
+
+---
+
+### Lab 13
+
+#### 🌐 Network Configuration with `ifconfig` and `ping`
+
+**Commands:** `ifconfig`, `ping`, `iwconfig`
+
+**Purpose:**  
+View and test network connections, IP addresses, and interface activity.
+
+---
+
+#### ⚙️ Key Commands
+
+- `ifconfig` → Displays active network interfaces and configuration.  
+  - Example: `eth0` with IPv4 `192.168.1.2` means the interface is active (UP).  
+  - `lo` (loopback) is used for internal network communication (address `127.0.0.1`).
+
+- `iwconfig` → Similar to `ifconfig`, but for wireless interfaces.
+
+- `ping [IP or HOSTNAME]` → Tests connectivity by sending network packets.  
+  - `ping -c 4 192.168.1.2` → Sends 4 packets to the target.  
+  - Successful replies confirm network reachability.  
+  - “Destination Host Unreachable” means no response.
+
+---
+
+#### 🧠 Notes
+
+- Use `Ctrl + C` to stop continuous ping tests.  
+- Ping may fail if a system or network blocks ICMP for security.  
+- You can also ping domain names (e.g., `ping yahoo.com`) to verify DNS resolution.
+
+---
+
+#### 🔚 Exit Root Mode
+
+Use `exit` to return to the normal user shell after finishing tests.
+
+**Screenshot:**  
+![Lab 13 Screenshot](images/lab13.png)
+
+---
+
+### Lab 14
+
+#### 🧩 Viewing Processes with `ps`
+
+**Command:** `ps [OPTIONS]`
+
+**Purpose:**  
+Displays active processes on the system, showing what’s running and under which user.
+
+---
+
+#### ⚙️ Key Commands
+
+- `ps` → Shows processes running in the current terminal.  
+  Example output includes:
+  - **PID** – Process ID (unique identifier)  
+  - **TTY** – Terminal associated with the process  
+  - **TIME** – Total CPU time used  
+  - **CMD** – Command that started the process  
+
+- `ps -e` → Displays *all* processes on the system.  
+- `ps -ef` → Displays detailed information about each process, including parent processes and command options.
+
+---
+
+#### 🧠 Notes
+
+- Each command executed creates a *process* that runs with the user’s privileges.  
+- Regular users can only control their own processes.  
+- The `root` user can manage or stop any process.  
+- Look for the `ps` command itself listed in the output — it’s included because it’s a running process too.
+
+---
+
+**Screenshot:**  
+![Lab 14 Screenshot](images/lab14.png)
+
+---
+### Lab 15
+
+#### 📦 Package Management with `apt-get`
+
+**Commands:** `apt-get`, `apt-cache`, `dpkg`, `sudo`
+
+**Purpose:**  
+Manage software installation, updates, and removal on Debian-based systems like Ubuntu.
+
+---
+
+#### ⚙️ Key Concepts
+
+- **Package Management:**  
+  Handles installing, updating, and removing software efficiently.  
+  Ubuntu uses the **APT** system, a front-end to **dpkg**.
+
+- **Administrative Access:**  
+  Most commands require `sudo` privileges (password: `netlab123`).
+
+---
+
+#### 🧩 Common Commands
+
+- **Update Package List:**  
+  `sudo apt-get update`  
+  Refreshes the list of available packages.
+
+- **Search for Packages:**  
+  `apt-cache search [keyword]`  
+  Example: `apt-cache search cow` → finds the *cowsay* package.
+
+- **Install a Package:**  
+  `sudo apt-get install cowsay`
+
+- **Run Installed Program:**  
+  `cowsay 'NDG Linux Unhatched'`  
+  🐄 → Outputs a talking ASCII cow with your message.
+
+- **Upgrade Installed Packages:**  
+  `sudo apt-get upgrade`  
+  Updates all packages to their latest versions.
+
+- **Remove or Purge Packages:**  
+  - `sudo apt-get remove cowsay` → removes package but keeps configs.  
+  - `sudo apt-get purge cowsay` → completely removes package and configs.
+
+---
+
+#### 🧠 Notes
+
+- `apt-get install` automatically updates a package if a newer version exists.  
+- Always run `apt-get update` before installing or upgrading.  
+- The `dpkg` command handles low-level package operations but is rarely used directly.
+
+---
+
+**Screenshot:**  
+![Lab 15 Screenshot](images/lab15.png)
+
+---
+
 ## 🐧 Fun Fact: Penguins in Space!
 
 - **NASA Uses Linux** 🚀  

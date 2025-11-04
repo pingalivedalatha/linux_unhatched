@@ -21,11 +21,11 @@ This repository documents my journey through Cisco’s Linux Unhatched labs, inc
 | **Lab 9**  | 🟢 Completed | ![Lab 9](images/lab9.png) |
 | **Lab 10** | 🟢 Completed | ![Lab 10](images/lab10.png) |
 | **Lab 11** | 🟢 Completed | ![Lab 11](images/lab11_1.png) |
-| **Lab 12** | 🟢 Completed | ![Lab 12](images/lab12.png) |
-| **Lab 13** | 🟢 Completed | ![Lab 13](images/lab13.png) |
-| **Lab 14** | 🟢 Completed | ![Lab 14](images/lab14.png) |
-| **Lab 15** | 🟢 Completed | ![Lab 15](images/lab15.png) |
-| **Lab 16** | 🟢 Completed | ![Lab 16](images/lab16.png) |
+| **Lab 12** | 🟢 Completed | ![Lab 12](images/lab12_1.png) |
+| **Lab 13** | 🟢 Completed | ![Lab 13](images/lab13_1.png) |
+| **Lab 14** | 🟢 Completed | ![Lab 14](images/lab14_1.png) |
+| **Lab 15** | 🟢 Completed | ![Lab 15](images/lab15_1.png) |
+| **Lab 16** | 🟢 Completed | ![Lab 16](images/lab16_1.png) |
 | **Lab 17** | 🟢 Completed | ![Lab 17](images/lab17.png) |
 | **Lab 18** | 🟢 Completed | ![Lab 18](images/lab18.png) |
 

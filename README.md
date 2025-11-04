@@ -865,6 +865,118 @@ Redirect command input and output streams to files or other destinations using *
 ![Lab 17 Screenshot](images/lab17.png)
 
 ---
+### Lab 18
+
+#### 📝 Text Editing with `vi` (or `vim`)
+
+**Commands:** `vi`, `vim`, `:w`, `:q`, `:q!`, `:wq`, `ZZ`
+
+**Purpose:**  
+Create and edit text files using the **vi/vim** text editor — available on all Linux systems.
+
+---
+
+#### ⚙️ Key Concepts
+
+- **vi (Visual Editor):**  
+  Universal text editor in Linux and UNIX.  
+  - Always available on any system.  
+  - Works in both CLI and GUI.  
+  - Modern versions use **vim (vi improved)**.
+
+- **Pronunciation:**  
+  “vee-eye,” not “vye.”  
+  (`vi` stands for *visual*, but is pronounced as letters.)
+
+---
+
+#### 🧩 Modes in `vi`
+
+| Mode | Description | Enter / Exit |
+|------|--------------|--------------|
+| **Command Mode** | Navigate and execute actions | Default mode; press `Esc` to return |
+| **Insert Mode** | Add or modify text | `i`, `a`, `o`, etc. |
+| **Ex Mode** | File operations and settings | Start with `:` |
+
+---
+
+#### 🧭 Basic Navigation (Command Mode)
+
+| Key | Action |
+|-----|--------|
+| `h` | Move left |
+| `j` | Move down |
+| `k` | Move up |
+| `l` | Move right |
+| `w` | Forward one word |
+| `b` | Back one word |
+| `^` | Start of line |
+| `$` | End of line |
+| `G` | Last line |
+| `nG` | Go to line *n* |
+| `Ctrl+G` | Show current line number |
+
+(Arrow keys also work.)
+
+---
+
+#### ✂️ Editing Actions
+
+| Action | Command | Description |
+|--------|----------|-------------|
+| **Delete** | `d`, `dd`, `dw`, `d3w` | Remove text (cuts to buffer) |
+| **Change** | `c`, `cc`, `cw` | Delete + enter Insert mode |
+| **Yank (Copy)** | `y`, `yy`, `yw` | Copy text to buffer |
+| **Put (Paste)** | `p` / `P` | Paste after / before cursor |
+
+---
+
+#### 🔍 Searching
+
+| Command | Description |
+|----------|-------------|
+| `/text` | Search forward |
+| `?text` | Search backward |
+| `n` / `N` | Next / previous match |
+
+---
+
+#### ✏️ Insert Mode Commands
+
+| Command | Description |
+|----------|-------------|
+| `i` | Insert before cursor |
+| `I` | Insert at line start |
+| `a` | Append after cursor |
+| `A` | Append at line end |
+| `o` | New line below |
+| `O` | New line above |
+
+Press `Esc` to return to command mode.
+
+---
+
+#### 💾 Ex Mode Commands (`:`)
+
+| Command | Purpose |
+|----------|----------|
+| `:w` | Save changes |
+| `:w filename` | Save as new file |
+| `:q` | Quit (only if no changes) |
+| `:q!` | Quit without saving |
+| `:wq` or `ZZ` | Save and quit |
+| `:e filename` | Open another file |
+| `:1` or `:n` | Go to line *n* |
+
+---
+
+#### 🧠 Notes
+
+- Add `!` to **force** an action (e.g., `:q!` to quit without saving).  
+- `ZZ` = save and quit (same as `:wq`).  
+- `vim` adds syntax highlighting, undo, and more features.
+
+---
 
 ## 🐧 Fun Fact: Penguins in Space!
 

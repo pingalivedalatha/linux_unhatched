@@ -35,7 +35,7 @@ This repository documents my journey through Cisco’s Linux Unhatched labs, inc
 ![Badge](images/badge.png)
 
 **Certificate:**  
-!Certificate](images/certificate.jpg)
+![Certificate](images/certificate.jpg)
 
 ---
 

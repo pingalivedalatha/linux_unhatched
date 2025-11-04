@@ -589,7 +589,8 @@ Example: `Sat Oct 3 22:15:58 UTC 2020`
 - Safely stops or reboots the system  
 
 **Screenshot:**  
-![Lab 12 Screenshot](images/lab12.png)
+![Lab 12 Screenshot](images/lab12_1.png)
+![Lab 12 Screenshot](images/lab12_2.png)
 
 ---
 
@@ -632,7 +633,8 @@ View and test network connections, IP addresses, and interface activity.
 Use `exit` to return to the normal user shell after finishing tests.
 
 **Screenshot:**  
-![Lab 13 Screenshot](images/lab13.png)
+![Lab 13 Screenshot](images/lab13_1.png)
+![Lab 13 Screenshot](images/lab13_2.png)
 
 ---
 
@@ -671,7 +673,8 @@ Displays active processes on the system, showing what’s running and under whic
 ---
 
 **Screenshot:**  
-![Lab 14 Screenshot](images/lab14.png)
+![Lab 14 Screenshot](images/lab14_1.png)
+![Lab 14 Screenshot](images/lab14_2.png)
 
 ---
 ### Lab 15
@@ -732,7 +735,9 @@ Manage software installation, updates, and removal on Debian-based systems like 
 ---
 
 **Screenshot:**  
-![Lab 15 Screenshot](images/lab15.png)
+![Lab 15 Screenshot](images/lab15_1.png)
+![Lab 15 Screenshot](images/lab15_2.png)
+![Lab 15 Screenshot](images/lab15_3.png)
 
 ---
 
